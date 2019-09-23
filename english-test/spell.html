@@ -92,37 +92,37 @@
     <div class="col-sm-4">
       <h3>Resposta</h3>
       <p  style='height: 110px'>
-        <input type="text" class="form-control" id="r01"  style='position: relative; top: 25px'> </input>
+        <input type="text" class="form-control" id="r01"  style='position: relative; top: 25px'  title='monkey'> </input>
       </p>
       <p  style='height: 110px'>
-        <input type="text" class="form-control" id="r02" style='position: relative; top: 25px'> </input>
+        <input type="text" class="form-control" id="r02" style='position: relative; top: 25px' title='cow'> </input>
       </p>
       <p  style='height: 110px'>
-        <input type="text" class="form-control" id="r03" style='position: relative; top: 25px'> </input>
+        <input type="text" class="form-control" id="r03" style='position: relative; top: 25px' title='turtle'> </input>
       </p>
       <p  style='height: 110px'>
-        <input type="text" class="form-control" id="r04" style='position: relative; top: 25px'> </input>
+        <input type="text" class="form-control" id="r04" style='position: relative; top: 25px' title='dog'> </input>
       </p>
       <p  style='height: 110px'>
-        <input type="text" class="form-control" id="r05" style='position: relative; top: 25px'> </input>
+        <input type="text" class="form-control" id="r05" style='position: relative; top: 25px' title='rabbit'> </input>
       </p>
       <p  style='height: 110px'>
-        <input type="text" class="form-control" id="r06" style='position: relative; top: 25px'> </input>
+        <input type="text" class="form-control" id="r06" style='position: relative; top: 25px' title='triangle'> </input>
       </p>
       <p  style='height: 110px'>
-        <input type="text" class="form-control" id="r07" style='position: relative; top: 25px'> </input>
+        <input type="text" class="form-control" id="r07" style='position: relative; top: 25px' title='dinosaur'> </input>
       </p>
       <p  style='height: 110px'>
-        <input type="text" class="form-control" id="r08" style='position: relative; top: 25px'> </input>
+        <input type="text" class="form-control" id="r08" style='position: relative; top: 25px' title='starfish'> </input>
       </p>
       <p  style='height: 110px'>
-        <input type="text" class="form-control" id="r09" style='position: relative; top: 25px'> </input>
+        <input type="text" class="form-control" id="r09" style='position: relative; top: 25px' title='bee'> </input>
       </p>
       <p  style='height: 110px'>
-        <input type="text" class="form-control" id="r10" style='position: relative; top: 25px'> </input>
+        <input type="text" class="form-control" id="r10" style='position: relative; top: 25px' title='duck'> </input>
       </p>
       <p  style='height: 110px'>
-        <input type="text" class="form-control" id="r11" style='position: relative; top: 25px'> </input>
+        <input type="text" class="form-control" id="r11" style='position: relative; top: 25px' title='panda'> </input>
       </p>
     </div>
     <div class="col-sm-4">
@@ -144,7 +144,15 @@
 <script>
   $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
+
+	$("input").blur(function() { 
+		if (this.value == this.title)
+			$(this).css("background-color", "#ADFF2F"); 
+		else
+			$(this).css("background-color", "red"); 
+    }); 
   });
+  
 </script>
 
 </body>
